@@ -11,15 +11,9 @@ class Config():
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
     ROOT_PATH = os.getcwd()
     STATIC_FOLDER = "static"
-    # SERVER_ADDRESS = "https://kidocode.com/"
     LOGS_FOLDER = os.path.dirname(__file__) + '/app/.log'
     if not os.path.exists(LOGS_FOLDER):
         os.mkdir(LOGS_FOLDER)
-
-    COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript',
-                          'image/gif', 'image/jpeg', 'audio/mpeg', 'video/mpeg', 'font/otf', 'image/png', 'font/ttf']
-    COMPRESS_LEVEL = 6
-    COMPRESS_MIN_SIZE = 500
 
     try:
         config_data = json.loads(open('key.json').read())
@@ -72,8 +66,8 @@ class LiveConfig(Config):
     DEBUG = False
     PORT = 8081
     EXE_MODE = 'LiveConfig'
-    SERVER_ADDRESS = 'https://kidocode.com/'
-    CONFIG_MOD = 'Live Development ' + 'https://kidocode.com/'
+    SERVER_ADDRESS = 'https://k.com/'
+    CONFIG_MOD = 'Live Development ' + 'https://k.com/'
     DATABASES = {
         'mongo': {
             'auth': True,

@@ -8,7 +8,7 @@ import pymongo
 app = Flask("AuthApp")
 api = Api(app)
 
-app.config.from_object('config.' + os.environ.get('LOGINAPP_CONFIG_MOD', 'DevLocalConfig'))
+app.config.from_object('config.' + os.environ.get('AUTHAPP_CONFIG_MOD', 'DevLocalConfig'))
 app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
